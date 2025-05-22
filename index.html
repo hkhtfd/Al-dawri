@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الدوري</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background: #0e001a;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 30% 30%, #3e00ff55, transparent 60%),
+                  radial-gradient(circle at 70% 70%, #ae00ff44, transparent 60%);
+      animation: pulse 8s infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      100% { transform: scale(1.1); opacity: 1; }
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #1f0033, #300044);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      background: linear-gradient(to right, #d000ff, #3e00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    table {
+      width: 95%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: #1a002d;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(160, 0, 255, 0.2);
+    }
+
+    th, td {
+      padding: 10px 6px;
+      text-align: center;
+      font-size: 14px;
+      border-bottom: 1px solid #4b0082;
+    }
+
+    th {
+      background-color: #2e004e;
+      color: #fff;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    tr:hover {
+      background-color: #32004d;
+    }
+
+    .matches {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      padding: 30px 10px;
+    }
+
+    .match-card {
+      background: linear-gradient(145deg, #280042, #1a002e);
+      border: 1px solid #5a00ff;
+      color: #eee;
+      padding: 15px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 320px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(110, 0, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .match-card:hover {
+      background: #36005a;
+      transform: scale(1.03);
+    }
+
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 3rem;
+      }
+      table th, table td {
+        font-size: 16px;
+        padding: 14px 10px;
+      }
+      .matches {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>الدوي </h1>
+    <p>بطولة اللاعبين الخمسة -مخر</p>
+  </header>
+
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>اللاعب</th>
+          <th>لعب</th>
+          <th>فاز</th>
+          <th>تعادل</th>
+          <th>خسر</th>
+          <th>أهداف</th>
+          <th>نقاط</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>عبدو</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>2</td><td>حامادا</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>3</td><td>أيمن</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>4</td><td>إسلام</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>5</td><td>سهيل</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="matches">
+    <div class="match-card">اليوم 1: أيمن × عبدو</div>
+    <div class="match-card">اليوم 2: سهيل × إسلام</div>
+    <div class="match-card">اليوم 3: أمين × أيمن</div>
+    <div class="match-card">اليوم 4: عبدو × سهيل</div>
+    <div class="match-card">اليوم 5: إسلام × أمين</div>
+    <div class="match-card">اليوم 6: أيمن × سهيل</div>
+    <div class="match-card">اليوم 7: عبدو × أمين</div>
+    <div class="match-card">اليوم 8: سهيل × أمين</div>
+    <div class="match-card">اليوم 9: إسلام × عبدو</div>
+    <div class="match-card">اليوم 10: أيمن × إسلام</div>
+  </section>
+
+</body>
+</html>
